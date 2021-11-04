@@ -24,60 +24,61 @@
         <div class="row">
             <div class="team-area col-12 d-flex justify-content-center">
 
-<!-- //Manager Team Mamber Card -->
-<div class="card Team-card">
-    <div class="card-header" id="manager-card">
-        <h2 class="card-title">{{ get_name manager }}</h2>
-        <h3 class="card-title"><i class="fas fa-mug-hot mr-2"></i>{{ get_role manager }}</h3>
-    </div>
-    <div class="card-body">
-        <ul class="list-group">
-            <li class="list-group-item">ID: {{ get_id manager }}</li>
-            <li class="list-group-item">Email: <a href="mail to:{{ get_email manager }}">{{ get_email manager }}</a></li>
-            <li class="list-group-item">Office number: {{ get_office_number manager }}</li>
-        </ul>
+    <!-- //Manager Team Mamber Card -->
+    <div class="card Team-card">
+        <div class="card-header" id="manager-card">
+            <h2 class="card-title">{{ get_name manager }}</h2>
+            <h3 class="card-title"><i class="fas fa-mug-hot mr-2"></i>{{ get_role manager }}</h3>
+        </div>
+        <div class="card-body">
+            <ul class="list-group">
+                <li class="list-group-item">ID: {{ get_id manager }}</li>
+                <li class="list-group-item">Email: <a href="mail to:{{ get_email manager }}">{{ get_email manager }}</a></li>
+                <li class="list-group-item">Office number: {{ get_office_number manager }}</li>
+            </ul>
+        </div>
+    </div>  
+
+    <!-- //Engineer Team Member Card -->
+    {{#each engineers}}
+    <div class="card Team-card">
+        <div class="card-header" id="engineer-card">
+            <h2 class="card-title">{{ get_name this }}</h2>
+            <h3 class="card-title"><i class="fas fa-glasses mr-2"></i>{{get_role this}}</h3>
+        </div>
+        <div class="card-body">
+            <ul class="list-group">
+                <li class="list-group-item">ID: {{ get_id this }}</li>
+                <li class="list-group-item">Email: <a href="mail to:{{ get_email this }}">{{ get_email this }}</a></li>
+                <li class="list-group-item">GitHub: <a href="https://github.com/{{ get_github this }}" target="_blank" rel="noopener noreferrer">{{ get_github this }}</a></li>
+            </ul>
+        </div>
+    {{/each}}
     </div>
 
 
-<!-- //Engineer Team Member Card -->
-{{#each engineers}}
-<div class="card Team-card">
-    <div class="card-header" id="engineer-card">
-        <h2 class="card-title">{{ get_name this }}</h2>
-        <h3 class="card-title"><i class="fas fa-glasses mr-2"></i>{{get_role this}}</h3>
+    <!-- //Intern Team Member Card -->
+    {{#each interns}}
+    <div class="card Team-card">
+        <div class="card-header" id="intern-card">
+            <h2 class="card-title">{{ get_name this}}</h2>
+            <h3 class="card-title"><i class="fas fa-user-graduate mr-2"></i>{{get_role this}}</h3>
+        </div>
+        <div class="card-body">
+            <ul class="list-group">
+                <li class="list-group-item">ID: {{ get_id this }}</li></li>
+                <li class="list-group-item">Email: <a href="mail to:{{ get_email this }}">{{ get_email this }}</a></li>
+                <li class="list-group-item">School: {{ get_school this }}</li>
+            </ul>
+        </div>
+    {{/each}}
     </div>
-    <div class="card-body">
-        <ul class="list-group">
-            <li class="list-group-item">ID: {{ get_id this }}</li>
-            <li class="list-group-item">Email: <a href="mail to:{{ get_email this }}">{{ get_email this }}</a></li>
-            <li class="list-group-item">GitHub: <a href="https://github.com/{{ get_github this }}" target="_blank" rel="noopener noreferrer">{{ get_github this }}</a></li>
-        </ul>
-    </div>
-{{/each}}
-
-
-<!-- //Intern Team Member Card -->
-{{#each interns}}
-<div class="card Team-card">
-    <div class="card-header" id="intern-card"></div>
-        <h2 class="card-title">{{ get_name this}}</h2>
-        <h3 class="card-title"><i class="fas fa-user-graduate mr-2"></i>{{get_role this}}</h3>
-    </div>
-    <div class="card-body">
-        <ul class="list-group">
-            <li class="list-group-item">ID: {{ get_id this }}</li></li>
-            <li class="list-group-item">Email: <a href="mail to:{{ get_email this }}">{{ get_email this }}</a></li>
-            <li class="list-group-item">School: {{ get_school this }}</li>
-        </ul>
-    </div>
-</div>
-{{/each}}
            
 
 
 
 
-</div>
+    </div>
         </div>
     </div> 
 </body>

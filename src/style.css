@@ -1,4 +1,4 @@
-#heading{
+#heading {
     background-color: rgb(245, 91, 91);
     color: white;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -6,26 +6,26 @@
     font-stretch: ultra-expanded;
 }
 
-.Team-card{
-    background-color: aliceblue;
-    margin: .25em;
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
-    border-radius: .25rem;
-}
-
-.card-header{
+.card-header { 
     background-color: #007bff;
     color:white;
 }
 
-/* .team-area {
-    max-width: 1000px;
-    flex-wrap: wrap;
-    margin:40px;
-} */
+.Team-card { 
+    background-color: aliceblue;
+    margin: 1em ;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+    border-radius: .25rem;
+    display: flex;
+    max-width: 280px;
+    max-height: 380px;
+    width: 90%;
+    flex-direction: column;
+}
 
-.card body {
+.card-body {
     max-width: 1000px;
     flex-wrap: wrap;
-    margin:40px;
+    margin: 15px;
+    display: flex;
 }
